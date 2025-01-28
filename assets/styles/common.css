@@ -60,7 +60,7 @@ main, .container {
 }
 
 main, .main {
-  background-image: url('../images/1.webp');
+  background-image: url('assets/img/1.jpg');
   background-position: 30% 100%;
   background-size: cover;
   text-shadow: #000 0 0 3px;
