@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="UTF-8">
+		<title>Clash of Tanks</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/styles/framework.css" type="text/css" rel="stylesheet" />
+    <link href="./assets/styles/common.css" type="text/css" rel="stylesheet" />
+    <link href="./assets/styles/main.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+  <a href=""><img class="logo" src="./assets/sprites/CoT_MA_2_logo-Photoroom-Photoroom (1).png" /></a>
+  <nav>
+    <a href="https://www.clashoftanks.com" class="centerize">Home</div></a>
+    <a href="https://www.clashoftanks.com/about" class="centerize">About</div></a>
+  </nav>
+</header>
+    <main id="simpleParallaxEffect" class="centerize">
+      <!--<div class="frost left"></div>
+      <div class="frost right"></div>-->
+      <img class="logoLarge" src="">
+      <div class="btnContainer">
+        <!--<a class="largeButton" style="background-color: #5ae05a;" href="https://discord.gg/86zMskU4gr">How to Play</a>-->
+        <h1>Coming Soon...</h1>
+        <a href="https://www.youtube.com/@ClashofTanksOfficial">YouTube</a>
+        <a href="https://t.me/clashoftanks">Telegram</a>
+        <a href="https://vk.com/clashoftanks">VK</a>
+        <!---<a class="largeButton" href="https://discord.com/invite/dqq3RXY">Join Discord</a>
+        <a class="largeButton" style="--hue: 300deg;" href="https://resources.txrevive.com/txSetup.exe">Download</a>--->
+        <div style="height: 100px; width: 1px;"></div>
+    </div>
+    </main>
+    <footer class="container centerize">
+  <h2>
+    Clash of Tanks.  Copyright by <a href="https://www.construct.com" target="_blank">Construct Platform Ltd.</a>
+  </h2>
+</footer>
+    <script src="./assets/scripts/KeyFirePlugin.js"></script>
+    <script defer>
+      var fixedDeltaTime = 1000 / 60;
+      var simpleParallaxEffect = setInterval(() => {
+        Object3DTransform("simpleParallaxEffect", 0, 0, -100, "calc(100% - {0}");
+      }, fixedDeltaTime);
+    </script>
+    </body>
+</html>
