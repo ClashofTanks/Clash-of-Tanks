@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+.logoLarge {
+  width: 80vw;
+  max-width: 360px;
+  height: auto; 
+}
+
+.btnContainer a {
+  backdrop-filter: blur(3px);
+  text-transform: uppercase;
+  font-size: 12pt;
+  text-shadow: 0 0 5px #000;
+  padding: 15px 0;
+  width: 175px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 10px 5px;
+  /*transition: 0.3s background-color;
+  background-color: #00000000;
+  color: #fff;
+  background-image: url("/src/sprites/buttonOverlay.png");
+  background-size: 100% 100%;*/
+
+  color: rgb(233, 255, 130);
+  /*text-shadow: 0 0 rgb(233 255 130);*/
+  /*box-shadow: 0 0 5px 1px rgb(0 0 0 / 50%);*/
+  transition: var(100ms);
+  background-image: linear-gradient(to bottom, #669a12 0%,#4f8509 50%,#3c7003 51%,#669a12 100%);
+  animation: ButtonGlow linear 2.0s infinite;
+  cursor: pointer;
+  box-shadow: 0 0 5px #000,
+    inset 0 0 0 1px #82ad23;
+  border-radius: 5px;
+  --hue: 0deg;
+}
+
+.btnContainer a:hover {
+  animation: none;
+  filter: brightness(1.2) hue-rotate(var(--hue));
+}
+
+@keyframes ButtonGlow {
+  0% { filter: brightness(1.2) hue-rotate(var(--hue)); }
+  50% { filter: brightness(1) hue-rotate(var(--hue)); }
+  100% { filter: brightness(1.2) hue-rotate(var(--hue)); }
+}
+
+main .intro {
+  position: relative;
+  left: 7.5%;
+  width: 85%;
+  text-align: left;
+  /*background-color: #ff00000D;*/
+  font-size: 2em;
+  text-shadow: #000 0 0 5px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+main .intro::before {
+  content: "";
+  height: 2.5em;
+  width: 2.5em;
+  background-color: #131a26;
+  border-radius: 50%;
+  display: block;
+  float: left;
+  margin-right: 15px;
+  box-shadow: inset #000 0 0 20px 10px;
+  box-shadow: inset 0 0 10px 2.5px #000, 0 0 0 2.5px #b3d4fc, 0 0 10px 2.5px #000;
+  background-image: url('./../sprites/ChannelIcon.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+main .intro #mainRoleThing {
+  display: block;
+  color: #3bd671;
+}
+
+.frost {
+  height: 100%;
+  position: absolute;
+  width: 5px;
+  /*background: #f00;*/
+}
+
+.frost.left, .frost.left::before, .frost.left::after {
+  left: 0;
+  background-position-x: 0;
+}
+
+.frost.right, .frost.right::before, .frost.right::after {
+  right: 0;
+  background-position-x: 100%;
+}
+
+.frost::before, .frost::after {
+  position: absolute;
+  content: "";
+  height: 500px;
+  width: 500px;
+  max-width: 50vw;
+  max-height: 50vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.frost::before {
+  top: 0;
+  background-position-y: 0;
+}
+
+.frost::after {
+  bottom: 0;
+  background-position-y: 100%;
+}
+
+.frost.left::before  { background-image: url("/src/sprites/Frost/TopLeft.png"); }
+.frost.left::after   { background-image: url("/src/sprites/Frost/BottomLeft.png"); }
+.frost.right::before { background-image: url("/src/sprites/Frost/TopRight.png"); }
+.frost.right::after  { background-image: url("/src/sprites/Frost/BottomRight.png"); }
+
+@media (max-width: 765px), (orientation: portrait) {
+  main .intro {
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: #000 0 0 2.5px;
+  }
+
+  main .intro::before {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  main .intro span {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5%;
+  }
+
+  main .intro #mainRoleThing {
+    display: block;
+    color: #3bd671;
+  }
+
+  #projects .row {
+    height: auto;
+  }
+
+  #projects .row a {
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 10px;
+    height: 20px;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  #projects .row img {
+    height: 20px;
+    width: 20px;
+    margin: 10px 10px 0 15px;
+  }
+}
