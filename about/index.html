@@ -1,1 +1,38 @@
-daf
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="UTF-8">
+		<title>Clash of Tanks - About the game</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/styles/framework.css" type="text/css" rel="stylesheet" />
+    <link href="assets/styles/common.css" type="text/css" rel="stylesheet" />
+    <link href="assets/styles/main.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+  <a href=""><img class="logo" src="assets/img/CoT_logo_2.png" /></a>
+  <nav>
+    <a href="https://www.clashoftanks.com" class="centerize">Home</div></a>
+    <a href="https://www.clashoftanks.com/about" class="centerize">About</div></a>
+  </nav>
+</header>
+    <main id="simpleParallaxEffect" class="centerize">
+      <!--<div class="frost left"></div>
+      <div class="frost right"></div>-->
+      <img class="logoLarge" src="">
+    </main>
+    <footer class="container centerize">
+  <h2>
+    © 2025 Clash of Tanks.  Copyright by <a href="#" target="_blank">Company Platform Ltd.</a>
+  </h2>
+</footer>
+    <script src="assets/scripts/KeyFirePlugin.js"></script>
+    <script defer>
+      var fixedDeltaTime = 1000 / 60;
+      var simpleParallaxEffect = setInterval(() => {
+        Object3DTransform("simpleParallaxEffect", 0, 0, -100, "calc(100% - {0}");
+      }, fixedDeltaTime);
+    </script>
+    </body>
+</html>
